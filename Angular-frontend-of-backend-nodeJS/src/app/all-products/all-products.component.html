@@ -1,0 +1,41 @@
+
+<div class="container">
+    <h4 class="mt-5 note text-uppercase"><span><em>Product List</em></span></h4>
+    <table class="table table-hover border table-bordered mt-5 ">
+        <thead class="table-primary text-center">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Description</th>
+                <th>
+                    <span> Action</span>
+                </th> 
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <tr *ngFor="let product of productList">
+                <th>{{product.id}}</th>
+                <th>{{product.name}}</th>
+                <th>{{product.price}}</th>
+                <td>{{product.quantity}}</td>
+                <td>{{product.description}}</td>
+                
+
+                <td>
+                    <a type="button" class="btn btn-primary me-1" [routerLink]="['/edit/', product.id]"> 
+                        <span>Edit</span>
+                    </a>
+                    <button type="button" class="btn btn-danger" (click)="delete(product.id)"> 
+                        <span>Delete</span>
+                    </button>
+
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+

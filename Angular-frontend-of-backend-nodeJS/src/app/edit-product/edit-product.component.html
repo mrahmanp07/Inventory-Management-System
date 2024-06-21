@@ -1,0 +1,44 @@
+
+
+
+<div class="container">
+    <h4 class="text-uppercase mt-5">
+        <em>Editing a Product</em>
+    </h4>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+    <div class="mb-3 mt-5">
+        <label for="name" class="form-label"><span>Name</span></label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+    </div>
+ 
+   
+    <div class="mb-3">
+        <label for="price" class="form-label"><span>Price</span></label>
+        <input type="number" class="form-control" id="price" formControlName="price">
+    </div>
+
+    <div class="mb-3">
+        <label for="quantity" class="form-label"><span>Quantity</span></label>
+        <input type="number" class="form-control" id="quantity" formControlName="quantity">
+    </div>
+   
+
+    <div class="mb-3">
+        <label for="description" class="form-label">
+            <span>Description</span>
+        </label>
+        <textarea class="form-control" id="description" rows="3" formControlName="description"></textarea>
+    </div>
+
+    <div style="text-align: end;" class="mt-3">
+        <button type="reset" class="btn btn-danger" style="margin-right: 6px;">
+            <span >Clear</span>
+        </button>
+        <button type="submit" class="btn btn-primary">
+            <span>Submit</span>
+        </button>
+    </div>
+</form>
+</div>
+
